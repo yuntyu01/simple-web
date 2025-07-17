@@ -34,4 +34,4 @@ jobs:
 
       - name: 9.Docker Push
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/simple-web:latest
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/simple-web:${{ env.DOCKER_TAG }} .
